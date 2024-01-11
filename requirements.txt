@@ -1,0 +1,4 @@
+streamlit
+Openai
+requests
+terminalgpt -U --user
