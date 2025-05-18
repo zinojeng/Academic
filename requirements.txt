@@ -1,3 +1,6 @@
 streamlit
-Openai
+flask
+flask_sqlalchemy
+openai
 requests
+python-dotenv

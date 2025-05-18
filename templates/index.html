@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1>Upload Audio</h1>
+<form method="post" enctype="multipart/form-data">
+  <div class="mb-3">
+    <input class="form-control" type="file" name="audio" required>
+  </div>
+  <button class="btn btn-primary" type="submit">Upload</button>
+</form>
+{% endblock %}

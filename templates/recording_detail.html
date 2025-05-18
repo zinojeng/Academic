@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1>Recording {{ rec.id }}</h1>
+<audio controls class="mb-3" src="{{ url_for('static', filename='uploads/' + rec.filename) }}"></audio>
+
+<h2>Transcript</h2>
+<pre>{{ rec.transcript }}</pre>
+
+<h2>Notes</h2>
+<div>{{ rec.notes | safe }}</div>
+
+<h2>Ask a Question</h2>
+<form method="post">
+  <div class="mb-3">
+    <input class="form-control" type="text" name="question" placeholder="Enter your question">
+  </div>
+  <button class="btn btn-primary" type="submit">Ask</button>
+</form>
+
+{% if answer %}
+<h3>Answer</h3>
+<p>{{ answer }}</p>
+{% endif %}
+{% endblock %}
